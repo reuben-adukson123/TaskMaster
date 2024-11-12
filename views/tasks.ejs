@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Tasks</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Your Tasks</h1>
+    </header>
+
+    <!-- Create Task Button -->
+    <a href="/tasks/new" class="btn">Create New Task</a>
+
+    <!-- Search Form -->
+    <form action="/tasks/search" method="get" class="form-container">
+      <input type="text" name="query" placeholder="Search by title or description">
+      <button type="submit">Search</button>
+    </form>
+
+    <!-- Filter Form -->
+    <form action="/tasks/filter" method="get" class="form-container">
+      <label for="priority">Priority:</label>
+      <select id="priority" name="priority">
+        <option value="all">All</option>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      <label for="dueDate">Due Date:</label>
+      <input type="date" id="dueDate" name="dueDate">
+      <button type="submit">Filter</button>
+    </form>
+
+    <h2>Task List</h2>
+    <% tasks.forEach(task => { %>
+      <div class="task-item">
+        <h3><%= task.title %></h3>
+        <p><%= task.description %></p>
+        <p>Priority: <%= task.priority %></p>
+        <p>Deadline: <%= task.deadline.toDateString() %></p>
+        <a href="/tasks/<%= task._id %>/edit">Edit</a>
+        <form action="/tasks/<%= task._id %>/delete" method="POST" style="display:inline;">
+          <button type="submit">Delete</button>
+        </form>
+      </div>
+    <% }) %>
+  </div>
+</body>
+</html>

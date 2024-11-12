@@ -1,0 +1,194 @@
+/* Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensures full viewport height */
+  padding: 20px;
+}
+
+/* Centering the Content */
+.container {
+  width: 100%;
+  max-width: 600px; /* Max width of the container */
+  margin: auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Common Form Styling */
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+form input,
+form select,
+form button {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form button {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #4CAF50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Login and Register Specific Styling */
+.login-register-form {
+  width: 100%;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.login-register-form input,
+.login-register-form button {
+  padding: 12px;
+}
+
+.login-register-form h2 {
+  font-size: 2rem;
+  color: #4CAF50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-register-form .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+.login-register-form .btn:hover {
+  background-color: #45a049;
+}
+
+/* Create New Task Form Styling */
+.create-task-form {
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.create-task-form input,
+.create-task-form textarea,
+.create-task-form select,
+.create-task-form button {
+  padding: 12px;
+  margin: 12px 0;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.create-task-form h2 {
+  font-size: 2rem;
+  color: #4CAF50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.create-task-form button {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.create-task-form button:hover {
+  background-color: #45a049;
+}
+
+/* Button Styles */
+button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .form-container input,
+  .form-container select,
+  .form-container button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .task-item h3 {
+    font-size: 1.3rem;
+  }
+}
